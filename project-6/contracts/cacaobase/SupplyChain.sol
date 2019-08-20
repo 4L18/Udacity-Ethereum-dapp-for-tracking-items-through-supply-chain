@@ -163,7 +163,7 @@ contract SupplyChain is AccessControl, Ownable {
     Item memory newItem;
 
     newItem.sku = sku;
-    newItem.ownerID = owner();
+    newItem.ownerID = _originFarmerID;
     newItem.itemState = defaultState;
     newItem.productID = sku + _upc;
     newItem.upc = _upc;
@@ -240,8 +240,8 @@ contract SupplyChain is AccessControl, Ownable {
   checkValue(_upc)
   {
     // Update the appropriate fields - ownerID, distributorID, itemState
-    items[_upc].ownerID = msg.sender;
     items[_upc].distributorID = msg.sender;
+    items[_upc].ownerID = items[_upc].distributorID;
     items[_upc].itemState = State.Sold;
     // Transfer money to farmer
     items[_upc].distributorID.transfer(items[_upc].productPrice);
@@ -273,8 +273,8 @@ contract SupplyChain is AccessControl, Ownable {
   onlyRetailer()
   {
     // Update the appropriate fields - ownerID, retailerID, itemState
-    items[_upc].ownerID = msg.sender;
     items[_upc].retailerID = msg.sender;
+    items[_upc].ownerID = items[_upc].retailerID;
     items[_upc].itemState = State.Received;
 
     // Emit the appropriate event

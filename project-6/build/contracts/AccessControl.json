@@ -1,0 +1,695 @@
+{
+  "contractName": "AccessControl",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "renounceRetailer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addConsumer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isRetailer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceConsumer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceDistributor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addDistributor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addFarmer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceFarmer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isConsumer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addRetailer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isDistributor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isFarmer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ConsumerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ConsumerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RetailerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RetailerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "DistributorAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "DistributorRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "FarmerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "FarmerRemoved",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x60806040523480156200001157600080fd5b506200002c3362000080640100000000026401000000009004565b6200004633620000ea640100000000026401000000009004565b620000603362000154640100000000026401000000009004565b6200007a33620001be640100000000026401000000009004565b62000380565b620000a48160006200022864010000000002620008f3179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6200010e8160016200022864010000000002620008f3179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b620001788160026200022864010000000002620008f3179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b620001e28160036200022864010000000002620008f3179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156200026557600080fd5b620002808282620002eb640100000000026401000000009004565b1515156200028d57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156200032957600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6109cf80620003906000396000f3006080604052600436106100ba576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630ca71432146100bf578063112940f9146101025780635da09b881461014557806361e6982d146101a0578063644241db146101b75780637250e224146101ce57806380c3f96d1461021157806380fc0ce414610254578063834ff7391461026b5780638ec4f505146102c65780638f0c86fa14610309578063b942906914610364575b600080fd5b3480156100cb57600080fd5b50610100600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103bf565b005b34801561010e57600080fd5b50610143600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103cb565b005b34801561015157600080fd5b50610186600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103eb565b604051808215151515815260200191505060405180910390f35b3480156101ac57600080fd5b506101b5610408565b005b3480156101c357600080fd5b506101cc610413565b005b3480156101da57600080fd5b5061020f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061041e565b005b34801561021d57600080fd5b50610252600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061043e565b005b34801561026057600080fd5b5061026961045e565b005b34801561027757600080fd5b506102ac600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610469565b604051808215151515815260200191505060405180910390f35b3480156102d257600080fd5b50610307600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610486565b005b34801561031557600080fd5b5061034a600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104a6565b604051808215151515815260200191505060405180910390f35b34801561037057600080fd5b506103a5600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104c3565b604051808215151515815260200191505060405180910390f35b6103c8816104e0565b50565b6103d433610469565b15156103df57600080fd5b6103e88161053a565b50565b600061040182600261059490919063ffffffff16565b9050919050565b61041133610628565b565b61041c33610682565b565b610427336104a6565b151561043257600080fd5b61043b816106dc565b50565b610447336104c3565b151561045257600080fd5b61045b81610736565b50565b61046733610790565b565b600061047f82600361059490919063ffffffff16565b9050919050565b61048f336103eb565b151561049a57600080fd5b6104a3816107ea565b50565b60006104bc82600161059490919063ffffffff16565b9050919050565b60006104d982600061059490919063ffffffff16565b9050919050565b6104f481600261084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db60405160405180910390a250565b61054e8160036108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156105d157600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b61063c81600361084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f09860405160405180910390a250565b61069681600161084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6106f08160016108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b61074a8160006108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6107a481600061084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b6107fe8160026108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561088057600080fd5b61088a8282610594565b151561089557600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561092f57600080fd5b6109398282610594565b15151561094557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050505600a165627a7a72305820c2d1374bb1898779c22fa720197db63b4549bb36221acd1458cb1dbb66d722480029",
+  "deployedBytecode": "0x6080604052600436106100ba576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630ca71432146100bf578063112940f9146101025780635da09b881461014557806361e6982d146101a0578063644241db146101b75780637250e224146101ce57806380c3f96d1461021157806380fc0ce414610254578063834ff7391461026b5780638ec4f505146102c65780638f0c86fa14610309578063b942906914610364575b600080fd5b3480156100cb57600080fd5b50610100600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103bf565b005b34801561010e57600080fd5b50610143600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103cb565b005b34801561015157600080fd5b50610186600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103eb565b604051808215151515815260200191505060405180910390f35b3480156101ac57600080fd5b506101b5610408565b005b3480156101c357600080fd5b506101cc610413565b005b3480156101da57600080fd5b5061020f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061041e565b005b34801561021d57600080fd5b50610252600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061043e565b005b34801561026057600080fd5b5061026961045e565b005b34801561027757600080fd5b506102ac600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610469565b604051808215151515815260200191505060405180910390f35b3480156102d257600080fd5b50610307600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610486565b005b34801561031557600080fd5b5061034a600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104a6565b604051808215151515815260200191505060405180910390f35b34801561037057600080fd5b506103a5600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104c3565b604051808215151515815260200191505060405180910390f35b6103c8816104e0565b50565b6103d433610469565b15156103df57600080fd5b6103e88161053a565b50565b600061040182600261059490919063ffffffff16565b9050919050565b61041133610628565b565b61041c33610682565b565b610427336104a6565b151561043257600080fd5b61043b816106dc565b50565b610447336104c3565b151561045257600080fd5b61045b81610736565b50565b61046733610790565b565b600061047f82600361059490919063ffffffff16565b9050919050565b61048f336103eb565b151561049a57600080fd5b6104a3816107ea565b50565b60006104bc82600161059490919063ffffffff16565b9050919050565b60006104d982600061059490919063ffffffff16565b9050919050565b6104f481600261084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db60405160405180910390a250565b61054e8160036108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156105d157600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b61063c81600361084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f09860405160405180910390a250565b61069681600161084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6106f08160016108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b61074a8160006108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6107a481600061084490919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b6107fe8160026108f390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561088057600080fd5b61088a8282610594565b151561089557600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561092f57600080fd5b6109398282610594565b15151561094557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050505600a165627a7a72305820c2d1374bb1898779c22fa720197db63b4549bb36221acd1458cb1dbb66d722480029",
+  "sourceMap": "144:137:1:-;;;237:37;8:9:-1;5:2;;;30:1;27;20:12;5:2;237:37:1;585:22:4;596:10;585;;;:22;;;:::i;:::-;620:27:3;636:10;620:15;;;:27;;;:::i;:::-;599:24:5;612:10;599:12;;;:24;;;:::i;:::-;601::2;614:10;601:12;;;:24;;;:::i;:::-;144:137:1;;1291:108:4;1343:20;1355:7;1343;:11;;;;;;:20;;;;;:::i;:::-;1386:7;1374:20;;;;;;;;;;;;1291:108;:::o;1401:123:3:-;1458:25;1475:7;1458:12;:16;;;;;;:25;;;;;:::i;:::-;1511:7;1494:25;;;;;;;;;;;;1401:123;:::o;1347:114:5:-;1401:22;1415:7;1401:9;:13;;;;;;:22;;;;;:::i;:::-;1448:7;1434:22;;;;;;;;;;;;1347:114;:::o;1337::2:-;1391:22;1405:7;1391:9;:13;;;;;;:22;;;;;:::i;:::-;1438:7;1424:22;;;;;;;;;;;;1337:114;:::o;244:167:6:-;335:1;316:21;;:7;:21;;;;308:30;;;;;;;;353:18;357:4;363:7;353:3;;;:18;;;:::i;:::-;352:19;344:28;;;;;;;;402:4;379;:11;;:20;391:7;379:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;244:167;;:::o;725:166::-;809:4;850:1;831:21;;:7;:21;;;;823:30;;;;;;;;866:4;:11;;:20;878:7;866:20;;;;;;;;;;;;;;;;;;;;;;;;;859:27;;725:166;;;;:::o;144:137:1:-;;;;;;;",
+  "deployedSourceMap": "144:137:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1168:85:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1168:85:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;1012:90:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1012:90:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;845:104:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;845:104:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1170:73:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1170:73:2;;;;;;1222:79:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1222:79:3;;;;;;1052:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1052:99:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;982:84:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;982:84:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1132:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1132:69:4;;;;;;847:104:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;847:104:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1010:90:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1010:90:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;878:110:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;878:110:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;823:100:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;823:100:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1168:85:5;1224:24;1240:7;1224:15;:24::i;:::-;1168:85;:::o;1012:90:2:-;753:22;764:10;753;:22::i;:::-;745:31;;;;;;;;1076:21;1089:7;1076:12;:21::i;:::-;1012:90;:::o;845:104:5:-;903:4;922:22;936:7;922:9;:13;;:22;;;;:::i;:::-;915:29;;845:104;;;:::o;1170:73:2:-;1211:27;1227:10;1211:15;:27::i;:::-;1170:73::o;1222:79:3:-;1266:30;1285:10;1266:18;:30::i;:::-;1222:79::o;1052:99::-;778:25;792:10;778:13;:25::i;:::-;770:34;;;;;;;;1122:24;1138:7;1122:15;:24::i;:::-;1052:99;:::o;982:84:4:-;733:20;742:10;733:8;:20::i;:::-;725:29;;;;;;;;1042:19;1053:7;1042:10;:19::i;:::-;982:84;:::o;1132:69::-;1171:25;1185:10;1171:13;:25::i;:::-;1132:69::o;847:104:2:-;905:4;924:22;938:7;924:9;:13;;:22;;;;:::i;:::-;917:29;;847:104;;;:::o;1010:90:5:-;751:22;762:10;751;:22::i;:::-;743:31;;;;;;;;1074:21;1087:7;1074:12;:21::i;:::-;1010:90;:::o;878:110:3:-;939:4;958:25;975:7;958:12;:16;;:25;;;;:::i;:::-;951:32;;878:110;;;:::o;823:100:4:-;879:4;898:20;910:7;898;:11;;:20;;;;:::i;:::-;891:27;;823:100;;;:::o;1564:122:5:-;1621:25;1638:7;1621:9;:16;;:25;;;;:::i;:::-;1673:7;1657:24;;;;;;;;;;;;1564:122;:::o;1337:114:2:-;1391:22;1405:7;1391:9;:13;;:22;;;;:::i;:::-;1438:7;1424:22;;;;;;;;;;;;1337:114;:::o;725:166:6:-;809:4;850:1;831:21;;:7;:21;;;;823:30;;;;;;;;866:4;:11;;:20;878:7;866:20;;;;;;;;;;;;;;;;;;;;;;;;;859:27;;725:166;;;;:::o;1554:122:2:-;1611:25;1628:7;1611:9;:16;;:25;;;;:::i;:::-;1663:7;1647:24;;;;;;;;;;;;1554:122;:::o;1633:131:3:-;1693:28;1713:7;1693:12;:19;;:28;;;;:::i;:::-;1751:7;1732:27;;;;;;;;;;;;1633:131;:::o;1401:123::-;1458:25;1475:7;1458:12;:16;;:25;;;;:::i;:::-;1511:7;1494:25;;;;;;;;;;;;1401:123;:::o;1291:108:4:-;1343:20;1355:7;1343;:11;;:20;;;;:::i;:::-;1386:7;1374:20;;;;;;;;;;;;1291:108;:::o;1498:116::-;1553:23;1568:7;1553;:14;;:23;;;;:::i;:::-;1601:7;1587:22;;;;;;;;;;;;1498:116;:::o;1347:114:5:-;1401:22;1415:7;1401:9;:13;;:22;;;;:::i;:::-;1448:7;1434:22;;;;;;;;;;;;1347:114;:::o;477:170:6:-;571:1;552:21;;:7;:21;;;;544:30;;;;;;;;588:18;592:4;598:7;588:3;:18::i;:::-;580:27;;;;;;;;637:5;614:4;:11;;:20;626:7;614:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;477:170;;:::o;244:167::-;335:1;316:21;;:7;:21;;;;308:30;;;;;;;;353:18;357:4;363:7;353:3;:18::i;:::-;352:19;344:28;;;;;;;;402:4;379;:11;;:20;391:7;379:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;244:167;;:::o",
+  "source": "pragma solidity ^0.4.24;\n\nimport './FarmerRole.sol';\nimport './DistributorRole.sol';\nimport './RetailerRole.sol';\nimport './ConsumerRole.sol';\n\ncontract AccessControl is FarmerRole, DistributorRole, RetailerRole, ConsumerRole {\n    \n    constructor() public {\n        \n    }\n    \n}",
+  "sourcePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/AccessControl.sol",
+  "ast": {
+    "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/AccessControl.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        75
+      ]
+    },
+    "id": 76,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/FarmerRole.sol",
+        "file": "./FarmerRole.sol",
+        "id": 59,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 385,
+        "src": "26:26:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/DistributorRole.sol",
+        "file": "./DistributorRole.sol",
+        "id": 60,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 282,
+        "src": "53:31:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/RetailerRole.sol",
+        "file": "./RetailerRole.sol",
+        "id": 61,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 489,
+        "src": "85:28:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/ConsumerRole.sol",
+        "file": "./ConsumerRole.sol",
+        "id": 62,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 179,
+        "src": "114:28:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 63,
+              "name": "FarmerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 384,
+              "src": "170:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FarmerRole_$384",
+                "typeString": "contract FarmerRole"
+              }
+            },
+            "id": 64,
+            "nodeType": "InheritanceSpecifier",
+            "src": "170:10:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 65,
+              "name": "DistributorRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 281,
+              "src": "182:15:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DistributorRole_$281",
+                "typeString": "contract DistributorRole"
+              }
+            },
+            "id": 66,
+            "nodeType": "InheritanceSpecifier",
+            "src": "182:15:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 67,
+              "name": "RetailerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 488,
+              "src": "199:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RetailerRole_$488",
+                "typeString": "contract RetailerRole"
+              }
+            },
+            "id": 68,
+            "nodeType": "InheritanceSpecifier",
+            "src": "199:12:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 69,
+              "name": "ConsumerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 178,
+              "src": "213:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ConsumerRole_$178",
+                "typeString": "contract ConsumerRole"
+              }
+            },
+            "id": 70,
+            "nodeType": "InheritanceSpecifier",
+            "src": "213:12:1"
+          }
+        ],
+        "contractDependencies": [
+          281,
+          178,
+          384,
+          488
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 75,
+        "linearizedBaseContracts": [
+          75,
+          178,
+          488,
+          281,
+          384
+        ],
+        "name": "AccessControl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 73,
+              "nodeType": "Block",
+              "src": "258:16:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 74,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "248:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "258:0:1"
+            },
+            "scope": 75,
+            "src": "237:37:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 76,
+        "src": "144:137:1"
+      }
+    ],
+    "src": "0:281:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/AccessControl.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        75
+      ]
+    },
+    "id": 76,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/FarmerRole.sol",
+        "file": "./FarmerRole.sol",
+        "id": 59,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 385,
+        "src": "26:26:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/DistributorRole.sol",
+        "file": "./DistributorRole.sol",
+        "id": 60,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 282,
+        "src": "53:31:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/RetailerRole.sol",
+        "file": "./RetailerRole.sol",
+        "id": 61,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 489,
+        "src": "85:28:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ali/myProjects/blockchainDeveloper/ethereum/Cocoa SupplyChain/nd1309-Project-6b-Example-Template-master/project-6/contracts/cacaoaccesscontrol/ConsumerRole.sol",
+        "file": "./ConsumerRole.sol",
+        "id": 62,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 179,
+        "src": "114:28:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 63,
+              "name": "FarmerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 384,
+              "src": "170:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FarmerRole_$384",
+                "typeString": "contract FarmerRole"
+              }
+            },
+            "id": 64,
+            "nodeType": "InheritanceSpecifier",
+            "src": "170:10:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 65,
+              "name": "DistributorRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 281,
+              "src": "182:15:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DistributorRole_$281",
+                "typeString": "contract DistributorRole"
+              }
+            },
+            "id": 66,
+            "nodeType": "InheritanceSpecifier",
+            "src": "182:15:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 67,
+              "name": "RetailerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 488,
+              "src": "199:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RetailerRole_$488",
+                "typeString": "contract RetailerRole"
+              }
+            },
+            "id": 68,
+            "nodeType": "InheritanceSpecifier",
+            "src": "199:12:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 69,
+              "name": "ConsumerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 178,
+              "src": "213:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ConsumerRole_$178",
+                "typeString": "contract ConsumerRole"
+              }
+            },
+            "id": 70,
+            "nodeType": "InheritanceSpecifier",
+            "src": "213:12:1"
+          }
+        ],
+        "contractDependencies": [
+          281,
+          178,
+          384,
+          488
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 75,
+        "linearizedBaseContracts": [
+          75,
+          178,
+          488,
+          281,
+          384
+        ],
+        "name": "AccessControl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 73,
+              "nodeType": "Block",
+              "src": "258:16:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 74,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "248:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "258:0:1"
+            },
+            "scope": 75,
+            "src": "237:37:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 76,
+        "src": "144:137:1"
+      }
+    ],
+    "src": "0:281:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2019-08-29T21:59:15.782Z"
+}

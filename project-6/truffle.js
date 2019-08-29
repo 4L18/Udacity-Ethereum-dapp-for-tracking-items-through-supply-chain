@@ -1,24 +1,30 @@
 // Allows us to use ES6 in our migrations and tests.
 require('babel-register')
 var HDWalletProvider = require("truffle-hdwallet-provider");
-var mnemonic = 'spirit supply whale amount human item harsh scare congress discover talent hamster';
-var infura = 'https://rinkeby.infura.io/v3/4497ec5165664a19bcdc0a7ff9ee9fd4';
+var mnemonic = 'physical gold amount aware drop slice grocery nothing meadow produce menu clerk';
+var infura = 'rinkeby.infura.io/v3/9c3ee1efa4634fa68b07f514eeffce70';
 // Edit truffle.config file should have settings to deploy the contract to the Rinkeby Public Network.
 // Infura should be used in the truffle.config file for deployment to Rinkeby.
 
 module.exports = {
   networks: {
-    ganache: {
+    development: {
       host: '127.0.0.1',
       port: 7545,
       network_id: '*' // Match any network id
     },
     rinkeby: {
-      provider: () =>
-        new HDWalletProvider(mnemonic, infura),
+      provider: function() {
+        return new HDWalletProvider(mnemonic, infura)
+        },
         network_id: '4',
         gas: 4500000,
         gasPrice: 10000000000,
     }
+  },
+  compilers: {
+    solc: {
+      version: "0.4.23"
+    }
   }
-}
+};
